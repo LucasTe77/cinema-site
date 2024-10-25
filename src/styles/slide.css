@@ -1,0 +1,84 @@
+/*Estilo do carrossel de sessões */
+.session-carousel {
+  background-color: #1C1C1C; /* Cor de fundo */ 
+  border-radius: 8px; /* Bordas arredondadas */
+}
+
+
+ /*Estilo dos slides de sessão */ 
+.session-slide {
+  position: relative; /* Posiciona os elementos de forma relativa */
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #474544; /* Borda do slide */
+  border-radius: 8px; /* Bordas arredondadas */
+  background-color: #2E2E2E; /* Cor de fundo do slide */
+  box-shadow: 0 4px 8px rgba(97, 97, 97, 0.1); /* Sombra leve ao redor do card */
+} 
+  /*
+
+/* Titulo do filme sobreposto à imagem */
+.session-slide h4 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(151, 149, 149);
+    font-size: 1.2rem;
+  }
+  
+  /* Estilização das informações da sessão */
+  .session-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #FFFFFF;
+  }
+
+  
+/* Cor dos pontos do carrossel */
+.slick-dots {
+    bottom: -30px; /* Ajusta a posição dos pontos  */
+  }
+  
+  .session-carousel .slick-dots li button {
+    background: #cccccc; /* Cor do ponto inativo */
+    border-radius: 50%; /* Ponto redondo */
+    width: 10px; /* Largura do ponto */
+    height: 10px; /* Altura do ponto */
+  }
+  
+  /* Cor dos pontos ativos  */
+  .slick-dots li button.slick-active {
+    background: #00ff0d; /* Cor dos pontos ativos */
+  }
+  
+  /* Efeito hover nos pontos do carrossel */
+  .slick-dots li button:hover {
+    background: #ffffff; /* Cor ao passar o mouse */
+  }
+  
+  /* Estilização adicional para os títulos do carrossel  */
+  .session-carousel h2 {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px; /* Ajuste para o título do carrossel */
+  }
+  
+  /* Estilo para o formato do filme e classificação indicativa */
+  .session-slide p {
+    color: #ffffff; /* Cor do texto para formato */
+    font-size: 0.9rem;
+    margin: 5px 0;
+    text-align: center; /* Centraliza o texto */
+  }
+  
+  /* Ajustes visuais para os cards do carrossel */
+  .slick-slide {
+    padding-inline: 10px;
+  }
+
+  .slick-prev,.slick-next{z-index: 99;}
+  .session-carousel .slick-prev{left: 30px;}
+  .session-carousel .slick-next{right: 30px;}

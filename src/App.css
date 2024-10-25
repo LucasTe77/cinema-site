@@ -1,0 +1,168 @@
+/* Estilo geral do corpo */
+body {
+  background-color: #121212; /* Cor de fundo */
+  color: #FFFFFF; /* Cor do texto */
+  font-family: 'Nexa', sans-serif; /* Fonte NexaBold */
+  margin: 0; /* Remove margens padrão */
+  padding: 0; /* Remove padding padrão */
+}
+
+/* Estilo do cabeçalho */
+.App-header {
+  background-image: url('./assets/cinema-background.jpg'); /* Caminho da imagem */
+  background-size: cover; /* Faz com que a imagem cubra todo o espaço do cabeçalho */
+  background-position: center; /* Centraliza a imagem */
+  padding: 40px 20px; /* Ajusta o espaçamento interno */
+  text-align: center; /* Centraliza o texto */
+  color: #FFFFFF; /* Cor do texto do cabeçalho */
+  font-size: 2.5rem; /* Tamanho da fonte */
+  border-bottom: 2px solid #FF6F61; /* Borda inferior */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px; /* Altura do cabeçalho */
+}
+
+/* Estilo da lista de filmes */
+.movies-list {
+  display: grid; /* Usando grid para layout */
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Layout responsivo */
+  gap: 20px; /* Espaçamento entre os cards */
+  padding: 20px; /* Espaçamento interno */
+}
+
+/* Estilo dos cards de filmes */
+.movie-card {
+  background-color: #1C1C1C; /* Cor de fundo do card */
+  color: #FFFFFF; /* Cor do texto do card */
+  border-radius: 8px; /* Bordas arredondadas */
+  padding: 20px; /* Espaçamento interno */
+  box-shadow: 0 10px 8px rgba(0, 0, 0, 0.5); /* Sombra do card */
+  transition: transform 0.3s ease; /* Transição suave */
+  display: flex; /* Flexbox para alinhar conteúdo */
+  flex-direction: column; /* Coluna para alinhar itens verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+  text-align: center; /* Centraliza o texto */
+}
+
+/* Estilo da imagem do filme */
+.movie-cover {
+  width: 100%; /* Largura total do card */
+  height: 300px; /* Altura fixa para uniformizar o tamanho */
+  object-fit: cover; /* Cobre a área do card sem distorção */
+  border-radius: 8px; /* Bordas arredondadas na imagem */
+}
+
+/* Efeito hover nos cards */
+.movie-card:hover {
+  transform: scale(1.05); /* Aumenta o tamanho do card */
+}
+
+/* Estilo dos botões */
+button {
+  background-color: #00ff73; /* Cor de fundo */
+  color: white; /* Cor do texto */
+  border: none; /* Sem borda */
+  padding: 10px 20px; /* Espaçamento interno */
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer; /* Cursor de mãozinha */
+  font-size: 16px; /* Tamanho da fonte */
+  transition: background-color 0.3s, transform 0.3s; /* Transição suave */
+  margin-top: 10px; /* Espaçamento acima dos botões */
+}
+
+/* Efeito hover nos botões */
+button:hover {
+  background-color: #1f3a24; /* Muda a cor de fundo */
+  transform: scale(1.05); /* Aumenta o tamanho ligeiramente */
+}
+
+/* Estilo do botão desabilitado */
+button:disabled {
+  background-color: #cccccc; /* Cor de fundo para botão desabilitado */
+  cursor: not-allowed; /* Cursor de "não permitido" */
+}
+
+/* Estilo dos botões primário e secundário */
+.primary {
+  background-color: #FF6F61; /* Cor de fundo do botão primário */
+}
+
+.secondary {
+  background-color: transparent; /* Fundo transparente */
+  color: #ffffff; /* Cor do texto do botão secundário */
+  border: 1px solid #FF6F61; /* Borda do botão secundário */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem; /* Tamanho do título em telas menores */
+  }
+
+  .movies-list {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Ajuste em telas menores */
+  }
+
+  .App-header {
+    padding: 20px; /* Ajusta o espaçamento interno */
+    font-size: 2rem; /* Ajusta o tamanho da fonte */
+  }
+}
+
+/* Estilo das imagens das sessões */
+.movie-image {
+  width: 100%; /* Mantém a largura total do card */
+  height: 200px; /* Altura da imagem */
+  object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
+  border-radius: 8px; /* Bordas arredondadas */
+  margin-bottom: 15px; /* Espaçamento inferior */
+  filter: brightness(50%); /* Escurece a imagem */
+}
+
+/* Estilo do botão lateral com ícone de 3 barras */
+.menu-button {
+  position: fixed; /* Fica fixo na tela */
+  top: 20px; /* Distância do topo */
+  left: 20px; /* Distância da esquerda */
+  background: none; /* Sem fundo */
+  border: none; /* Sem borda */
+  cursor: pointer; /* Mãozinha ao passar o mouse */
+  z-index: 1000; /* Para garantir que fique acima de outros elementos */
+}
+
+/* Estilo das barras do ícone */
+.bar {
+  display: block; /* Cada barra ocupa uma linha */
+  width: 25px; /* Largura das barras */
+  height: 3px; /* Altura das barras */
+  margin: 5px auto; /* Margem acima e abaixo de cada barra */
+  background-color: #ffffff; /* Cor das barras */
+  transition: all 0.3s ease; /* Transição suave */
+}
+
+/* Esconde as barras quando o menu está aberto */
+.menu-button.active .bar {
+  opacity: 0; /* Faz as barras sumirem */
+  transition: opacity 0.3s ease; /* Transição suave */
+}
+
+/* Estilo do menu lateral */
+.sidebar {
+  position: fixed; /* Fica fixo na tela */
+  top: 0; /* Alinha ao topo */
+  left: -250px; /* Fora da tela inicialmente */
+  width: 250px; /* Largura do menu */
+  height: 100%; /* Altura total */
+  background-color: #1C1C1C; /* Cor de fundo */
+  color: white; /* Cor do texto */
+  padding: 20px; /* Espaçamento interno */
+  transition: left 0.3s ease; /* Animação suave */
+  z-index: 999; /* Abaixo do botão */
+}
+
+/* Estilo do menu aberto */
+.sidebar.open {
+  left: 0; /* Move o menu para dentro da tela */
+}
+
