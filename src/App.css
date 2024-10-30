@@ -60,7 +60,7 @@ body {
 
 /* Estilo dos botões */
 button {
-  background-color: #00ff73; /* Cor de fundo */
+  background-color: #000000; /* Cor de fundo */
   color: white; /* Cor do texto */
   border: none; /* Sem borda */
   padding: 10px 20px; /* Espaçamento interno */
@@ -73,7 +73,7 @@ button {
 
 /* Efeito hover nos botões */
 button:hover {
-  background-color: #1f3a24; /* Muda a cor de fundo */
+  background-color: #9c3237; /* Muda a cor de fundo */
   transform: scale(1.05); /* Aumenta o tamanho ligeiramente */
 }
 
@@ -166,3 +166,62 @@ button:disabled {
   left: 0; /* Move o menu para dentro da tela */
 }
 
+a:link { /* Cor do Texto */
+  text-decoration: none; /*Tirar o traço debaixo do texto*/
+  font-size: 1.3em; /*Tamanho da fonte*/
+  font-family: Verdana, Geneva, Tahoma, sans-serif; /*Mudar a fonte Padrão*/
+  padding: 10px; /*Espaçamento entre a bolinha e o texto*/
+  color: #ffffff; /*Cor do texto*/
+}
+a:visited {
+  color: #ffffff;
+}
+a:hover { /*Cor do Texto ao passar o mouse encima*/
+  color: #ec4a4a;
+}
+a:active {
+  color: #e02222;
+}
+
+.menu-container {
+    position: relative;
+}
+
+.menu-button {
+    font-size: 24px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.menu {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+.menu li:hover {
+    background-color: #f4f4f4;
+}

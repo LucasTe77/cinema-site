@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Movies from './Components/Movies';
 import SessionCarousel from './Components/SessionCarousel';
 import 'slick-carousel/slick/slick.css';
@@ -6,20 +6,39 @@ import 'slick-carousel/slick/slick-theme.css';
 import './App.css';
 
 function App() {
-    const [isMenuOpen, setIsMenuOpen] = useState(false); // Estado para controlar a abertura do menu
+    const [isMenuOpen, setIsMenuOpen] = useState(false); // Estado para controlar o menu
+    const menuRef = useRef(null); // Referência para o menu
 
-    // Função para alternar a visibilidade do menu
+    // Alterna a visibilidade do menu
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
 
+    // Fecha o menu ao clicar fora dele
+    const handleClickOutside = (event) => {
+        if (menuRef.current && !menuRef.current.contains(event.target)) {
+            setIsMenuOpen(false); // Fecha o menu se o clique for fora dele
+        }
+    };
+
+    // Adiciona e remove o listener para clique fora do menu
+    useEffect(() => {
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
+
     return (
         <div className="App">
-            {/* Cabeçalho do site */}
+            {/* Cabeçalho */}
             <header className="App-header">
-                <h1>CineLux</h1> {/* Nome do site */}
-                {/* Botão lateral com ícone de 3 barras */}
-                <button className={`menu-button ${isMenuOpen ? 'active' : ''}`} onClick={toggleMenu}>
+                <h1>CineLux</h1>
+                {/* Botão do menu */}
+                <button
+                    className={`menu-button ${isMenuOpen ? 'active' : ''}`}
+                    onClick={toggleMenu}
+                >
                     <span className="bar"></span>
                     <span className="bar"></span>
                     <span className="bar"></span>
@@ -27,7 +46,10 @@ function App() {
             </header>
 
             {/* Menu lateral */}
-            <nav className={`sidebar ${isMenuOpen ? 'open' : ''}`}>
+            <nav
+                className={`sidebar ${isMenuOpen ? 'open' : ''}`}
+                ref={menuRef}
+            >
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#ingressos">Ingressos</a></li>
@@ -36,13 +58,11 @@ function App() {
                 </ul>
             </nav>
 
-            {/* Exibe o carrossel de sessões */}
+            {/* Carrossel e lista de filmes */}
             <SessionCarousel />
-
-            {/* Exibe a lista de filmes */}
             <Movies />
 
-            {/* Seções para linkagem interna (opcional) */}
+            {/* Seções internas */}
             <section id="home">
                 <h2>Bem-vindo ao CineLux!</h2>
             </section>
