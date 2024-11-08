@@ -225,3 +225,24 @@ a:active {
 .menu li:hover {
     background-color: #f4f4f4;
 }
+
+/*Rodapé*/
+.footer {
+  background-color: #111111; /* Fundo escuro */
+  color: #FFFFFF; /* Cor do texto */
+  padding: 30px 20px;
+  font-size: 0.9rem;
+  border-top: 2px solid #FF6F61;
+}
+
+.footer-section h3 {
+  color: #FF6F61;
+  margin-bottom: 10px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  color: #AAAAAA;
+  font-size: 0.8rem;
+}

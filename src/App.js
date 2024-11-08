@@ -62,21 +62,20 @@ function App() {
             <SessionCarousel />
             <Movies />
 
-            {/* Seções internas */}
-            <section id="home">
-                <h2>Bem-vindo ao CineLux!</h2>
-            </section>
-            <section id="ingressos">
-                <h2>Compre seus Ingressos</h2>
-            </section>
-            <section id="programacao">
-                <h2>Programação Atual</h2>
-            </section>
-            <section id="contato">
-                <h2>Fale Conosco</h2>
-            </section>
-        </div>
+            {/* Rodapé */}
+            <footer className="footer">
+                <div className="footer-content">
+                    <div className="footer-section contact">
+                        <h3>Contato</h3>
+                        <p>Email: contato@cinelux.com</p>
+                        <p>Telefone: (16) 3387-5678</p>
+                    </div>
+                </div>
+                <div className="footer-bottom">
+                    &copy; 2024 CineLux. Todos os direitos reservados.
+                </div>
+            </footer>
+                    </div>
     );
 }
-
 export default App;

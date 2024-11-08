@@ -50,11 +50,11 @@ const Movies = () => {
         },
         {
             title: "Avatar",
-            duration: "162 min",
+            duration: "192 min",
             genre: "Ficção Científica, Aventura",
-            year: 2009,
+            year: 2022,
             img: avatar,
-            trailerUrl: "https://www.youtube.com/watch?v=h4j5bdaTqCc",
+            trailerUrl: "https://www.youtube.com/watch?v=x5pZI-DmtrE",
         },
     ];
 
