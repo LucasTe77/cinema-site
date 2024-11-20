@@ -6,7 +6,7 @@ body {
   margin: 0; /* Remove margens padrão */
   padding: 0; /* Remove padding padrão */
 }
-
+ 
 /* Estilo do cabeçalho */
 .App-header {
   background-image: url('./assets/cinema-background.jpg'); /* Caminho da imagem */
@@ -22,7 +22,7 @@ body {
   align-items: center;
   height: 250px; /* Altura do cabeçalho */
 }
-
+ 
 /* Estilo da lista de filmes */
 .movies-list {
   display: grid; /* Usando grid para layout */
@@ -30,7 +30,7 @@ body {
   gap: 20px; /* Espaçamento entre os cards */
   padding: 20px; /* Espaçamento interno */
 }
-
+ 
 /* Estilo dos cards de filmes */
 .movie-card {
   background-color: #1C1C1C; /* Cor de fundo do card */
@@ -44,7 +44,7 @@ body {
   align-items: center; /* Centraliza horizontalmente */
   text-align: center; /* Centraliza o texto */
 }
-
+ 
 /* Estilo da imagem do filme */
 .movie-cover {
   width: 100%; /* Largura total do card */
@@ -52,12 +52,12 @@ body {
   object-fit: cover; /* Cobre a área do card sem distorção */
   border-radius: 8px; /* Bordas arredondadas na imagem */
 }
-
+ 
 /* Efeito hover nos cards */
 .movie-card:hover {
   transform: scale(1.05); /* Aumenta o tamanho do card */
 }
-
+ 
 /* Estilo dos botões */
 button {
   background-color: #000000; /* Cor de fundo */
@@ -70,46 +70,46 @@ button {
   transition: background-color 0.3s, transform 0.3s; /* Transição suave */
   margin-top: 10px; /* Espaçamento acima dos botões */
 }
-
+ 
 /* Efeito hover nos botões */
 button:hover {
   background-color: #9c3237; /* Muda a cor de fundo */
   transform: scale(1.05); /* Aumenta o tamanho ligeiramente */
 }
-
+ 
 /* Estilo do botão desabilitado */
 button:disabled {
   background-color: #cccccc; /* Cor de fundo para botão desabilitado */
   cursor: not-allowed; /* Cursor de "não permitido" */
 }
-
+ 
 /* Estilo dos botões primário e secundário */
 .primary {
   background-color: #FF6F61; /* Cor de fundo do botão primário */
 }
-
+ 
 .secondary {
   background-color: transparent; /* Fundo transparente */
   color: #ffffff; /* Cor do texto do botão secundário */
   border: 1px solid #FF6F61; /* Borda do botão secundário */
 }
-
+ 
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
   h1 {
     font-size: 2rem; /* Tamanho do título em telas menores */
   }
-
+ 
   .movies-list {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Ajuste em telas menores */
   }
-
+ 
   .App-header {
     padding: 20px; /* Ajusta o espaçamento interno */
     font-size: 2rem; /* Ajusta o tamanho da fonte */
   }
 }
-
+ 
 /* Estilo das imagens das sessões */
 .movie-image {
   width: 100%; /* Mantém a largura total do card */
@@ -119,7 +119,7 @@ button:disabled {
   margin-bottom: 15px; /* Espaçamento inferior */
   filter: brightness(50%); /* Escurece a imagem */
 }
-
+ 
 /* Estilo do botão lateral com ícone de 3 barras */
 .menu-button {
   position: fixed; /* Fica fixo na tela */
@@ -130,7 +130,7 @@ button:disabled {
   cursor: pointer; /* Mãozinha ao passar o mouse */
   z-index: 1000; /* Para garantir que fique acima de outros elementos */
 }
-
+ 
 /* Estilo das barras do ícone */
 .bar {
   display: block; /* Cada barra ocupa uma linha */
@@ -140,13 +140,13 @@ button:disabled {
   background-color: #ffffff; /* Cor das barras */
   transition: all 0.3s ease; /* Transição suave */
 }
-
+ 
 /* Esconde as barras quando o menu está aberto */
 .menu-button.active .bar {
   opacity: 0; /* Faz as barras sumirem */
   transition: opacity 0.3s ease; /* Transição suave */
 }
-
+ 
 /* Estilo do menu lateral */
 .sidebar {
   position: fixed; /* Fica fixo na tela */
@@ -160,15 +160,15 @@ button:disabled {
   transition: left 0.3s ease; /* Animação suave */
   z-index: 999; /* Abaixo do botão */
 }
-
+ 
 /* Estilo do menu aberto */
 .sidebar.open {
   left: 0; /* Move o menu para dentro da tela */
 }
-
+ 
 a:link { /* Cor do Texto */
   text-decoration: none; /*Tirar o traço debaixo do texto*/
-  font-size: 1.3em; /*Tamanho da fonte*/
+  font-size: 1.2em; /*Tamanho da fonte*/
   font-family: Verdana, Geneva, Tahoma, sans-serif; /*Mudar a fonte Padrão*/
   padding: 10px; /*Espaçamento entre a bolinha e o texto*/
   color: #ffffff; /*Cor do texto*/
@@ -182,18 +182,18 @@ a:hover { /*Cor do Texto ao passar o mouse encima*/
 a:active {
   color: #e02222;
 }
-
+ 
 .menu-container {
     position: relative;
 }
-
+ 
 .menu-button {
     font-size: 24px;
     cursor: pointer;
     background-color: transparent;
     border: none;
 }
-
+ 
 .menu {
     position: absolute;
     top: 50px;
@@ -204,28 +204,28 @@ a:active {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 200px;
 }
-
+ 
 .menu ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
-
+ 
 .menu li {
     padding: 12px;
     border-bottom: 1px solid #eee;
 }
-
+ 
 .menu li a {
     text-decoration: none;
     color: #333;
     display: block;
 }
-
+ 
 .menu li:hover {
     background-color: #f4f4f4;
 }
-
+ 
 /*Rodapé*/
 .footer {
   background-color: #111111; /* Fundo escuro */
@@ -234,15 +234,71 @@ a:active {
   font-size: 0.9rem;
   border-top: 2px solid #FF6F61;
 }
-
-.footer-section h3 {
+ 
+.footer-section h3 { /*faixa do rodapé*/
   color: #FF6F61;
   margin-bottom: 10px;
 }
-
+ 
 .footer-bottom {
   text-align: center;
   margin-top: 20px;
-  color: #AAAAAA;
+  color: #9c9c9c;
   font-size: 0.8rem;
+}
+ 
+/*TABELA DOS HORÁRIOS*/
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.schedule-table td { /*Cor da linha da grade*/
+  border: 1px solid #000000;
+  padding: 10px;
+  text-align: center;
+}
+
+.schedule-table th { /*Cor do topo da tabela*/
+  background-color: #ee5d5d;
+}
+
+.schedule-table td { /*Cor de fundo nos dias*/
+  background-color: #333333; 
+}
+
+/* Responsividade para telas menores */
+@media screen and (max-width: 768px) {
+  .schedule-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .schedule-table thead {
+    display: none;
+  }
+
+  .schedule-table tr {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .schedule-table td {
+    display: block;
+    text-align: left;
+    padding: 8px;
+    border: none;
+    border-bottom: 1px solid #3f3f3f;
+    font-size: 14px;
+  }
+
+  .schedule-table td:before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: inline-block;
+    width: 100px;
+    margin-right: 10px;
+  }
 }
